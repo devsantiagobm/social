@@ -1,0 +1,55 @@
+include info.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+
+        link(rel="icon", type="image/png" sizes="32x32" href="./images/favicon-32x32.png")
+
+        link(rel='preconnect', href='https://fonts.googleapis.com')
+        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap', rel='stylesheet')
+        link(rel="stylesheet", href="src/style.css")
+
+        script(src="src/script.js" defer) 
+    body 
+        .wall
+        main.main 
+            nav.nav
+                div 
+                    h1.nav__title Social Media Dashboard
+                    span.nav__text Total Followers: 23,004 
+                .nav__line
+                div.nav__box
+                    span.nav__text-mode Dark Mode
+                    .nav__toggle
+                        .nav__circle
+            ul.list
+                each item in list 
+                    li.list__items(style=`--clr: ${item.color} `)
+                        div.list__box 
+                            img(src=`${item.imagen}`, alt="Icono Social Media").list__icon
+                            span.list__user= item.user
+                        p.list__followers= item.followers
+                        span.list__text followers 
+                        div.list__box
+                            img(src= item.arrow ? 'images/icon-up.svg' : 'images/icon-down.svg', alt="Icono de flecha")
+                            span(data-color= item.arrow ? 'up' : 'down').list__number= item.num
+            .content
+                h2.content__title Overview - Today
+                .content__list
+                    each item in content 
+                        span.content__items 
+                            .content__box 
+                                span.content__name= item.name
+                                img(src=`${item.imagen}`, alt="Icono Social Media").content__icon
+                            .content__box 
+                                span.content__numbers= item.num
+                                .content__box.content__box--porcentage 
+                                    img(src= item.arrow ? 'images/icon-up.svg' : 'images/icon-down.svg', alt="")
+                                    span(data-color= item.arrow ? 'up' : 'down').content__porcentage= item.porcentage
+
+    

@@ -1,0 +1,10 @@
+@use '../base/base' as *;
+@use '../component/component' as *;
+
+
+@media screen and (max-width: 812px){
+    @include base-mobile();
+    @include nav-mobile();
+    @include list-mobile();
+    @include content-mobile();
+}

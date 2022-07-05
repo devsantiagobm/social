@@ -1,0 +1,35 @@
+:root {
+
+    // TEMA OSCURO
+    --dark-bg: hsl(230, 17%, 14%); //bg
+    --dark-grad: hsl(232, 19%, 15%); //(top bg pattern)
+    --dark-cards: hsl(228, 28%, 20%); //card bg
+    --dark-text: hsl(0, 0%, 100%); //text
+    --dark-text-two: hsl(228, 34%, 66%); // text
+    --dark-toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --dark-hover: hsl(228, 28%, 25%);
+    
+    // TEMA CLARO
+    --light-bg: hsl(0, 0%, 100%); //bg
+    --light-grad: hsl(225, 100%, 98%); // top bg pattern
+    --light-cards: hsl(227, 47%, 96%); // card bg
+    --light-text: hsl(230, 17%, 14%); //text
+    --light-text-two: hsl(228, 12%, 44%); // text
+    --light-toggle: linear-gradient(to right, hsl(230, 22%, 74%), hsl(230, 22%, 74%));
+    --light-hover: hsl(227, 47%, 90%); // card bg
+
+
+    // COLORES USADOS
+    --gradiente-body: var(--dark-grad);
+    --fondo-body: var(--dark-bg);
+    --color: var(--dark-text);
+    --color-dos: var(--dark-text-two);
+    --fondo-card: var(--dark-cards);
+    --toggle: var(--dark-toggle);
+    --hover: var(--dark-hover);
+    --brillo: 125%;
+        
+    // COLORES ADICIONALES
+    --green: hsl(163, 72%, 41%);
+    --red: hsl(356, 69%, 56%);
+}

@@ -1,0 +1,3 @@
+@mixin trans(){
+    transition: color .3s ease, background-color .3s ease;
+}

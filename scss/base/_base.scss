@@ -1,0 +1,38 @@
+@use '../assets/assets' as *;
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--fondo-body);
+    color: var(--color);
+    @include trans();
+}
+
+.wall{
+    background-color: var(--gradiente-body);
+    height: 35vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 0 16px 16px;
+    @include trans();
+}
+
+.main{
+    width: 75%;
+    margin: 0 auto;
+    padding: 48px 0 80px;
+}
+
+
+@mixin base-mobile(){
+    .wall{
+        height: 50vh;
+    }
+
+    .main{
+        width: 90%;
+        max-width: 650px;
+    }
+}

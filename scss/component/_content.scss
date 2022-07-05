@@ -1,0 +1,70 @@
+@use '../assets/assets' as *;
+
+.content{
+
+    &__title{
+        font-size: 26px;
+        margin: 0 0 24px;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(269px, 1fr));
+        gap: 16px;
+    }
+
+    &__items{
+        background-color: var(--fondo-card);
+        border-radius: 5px;
+        padding: 28px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        cursor: pointer;
+        @include trans();
+        &:hover{
+            @media (hover:hover){
+                background-color: var(--hover);
+            }
+        }
+    }
+
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--porcentage{
+            justify-content: flex-start;
+            gap: 4px;
+        }
+    }
+
+    &__name{
+        color: var(--color-dos);
+    }
+
+    &__icon{
+        max-width: 20px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    &__numbers{
+        font-size: 32px;
+        font-weight: $bold;
+    }
+
+    &__porcentage{
+        color: var(--green);
+        font-weight: $bold;
+        &[data-color="down"]{
+            color: var(--red);
+        }
+    }
+}
+
+@mixin content-mobile(){
+    .content__list{
+        gap: 32px 16px;
+    }
+}
